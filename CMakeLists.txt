@@ -148,6 +148,7 @@ catkin_install_python(PROGRAMS
   script/PybulletPlanScene.py
   script/PoseEstimator.py
   script/RearrangementTaskPlanner.py
+  script/RunExample.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
