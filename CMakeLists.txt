@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   roslib
   message_generation
+  catkin_virtualenv
 )
 
 ## System dependencies are found with CMake's conventions
@@ -25,6 +26,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 # catkin_python_setup()
+catkin_generate_virtualenv(
+  PYTHON_INTERPRETER python3
+)
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -237,6 +241,8 @@ target_link_libraries(main_planner_node2
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+install(FILES requirements.txt
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 #############
 ## Testing ##

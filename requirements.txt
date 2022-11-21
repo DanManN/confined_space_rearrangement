@@ -1,0 +1,7 @@
+GitPython==2.1
+psutil==5.2.2
+opencv-python>=4.2.0
+numpy
+scipy
+ipython
+pybullet
